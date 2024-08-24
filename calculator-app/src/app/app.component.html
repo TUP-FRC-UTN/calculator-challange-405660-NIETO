@@ -1,0 +1,30 @@
+<div>
+    <h1>Calculadora</h1>
+
+    <label for="value1">Valor 1</label>
+    <input id="value1" type="number" [(ngModel)]="value1" />
+
+    <label for="value2">Valor 2</label>
+    <input id="value2" type="number" [(ngModel)]="value2" />
+
+    <label for="operation">Operacion</label>
+    <select id="operation" [(ngModel)]="operation">
+        <option value="sum">+</option>
+        <option value="sub">-</option>
+        <option value="mul">*</option>
+        <option value="div">/</option>
+        <option value="pow">^</option>
+        <option value="sqrt">√</option>
+    </select>
+
+    <button (click)="onCalculate()">Calculate</button>
+
+    <app-calculator 
+    [value1]="value1"
+    [value2]="value2"
+    [operation]="operation"
+    (result)="setResult($event)">
+    </app-calculator>
+
+    <h2>Resultado: {{result}}</h2>
+</div>

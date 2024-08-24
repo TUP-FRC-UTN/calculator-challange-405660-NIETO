@@ -1,0 +1,13 @@
+div {
+    text-align: center;
+    margin-top: 50px;
+}
+
+input, select {
+    margin: 10px;
+    padding: 5px;
+}
+
+h2 {
+    margin-top: 20px;
+}
